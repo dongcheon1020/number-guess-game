@@ -8,6 +8,11 @@ let history = [];
 let inputMessage = document.querySelector(".input-messege");
 let chanceAreaNum = 5;
 let gameOver = false;
+let correct = document.querySelector(".correct");
+
+correct.addEventListener("click", function () {
+  alert(`정답: ${computerNum}`);
+});
 
 playBt.addEventListener("click", play);
 resetBt.addEventListener("click", reset);
@@ -43,7 +48,11 @@ function play() {
   } else {
     resultArea.textContent = "정답!";
     resultArea.style = "color:#1BD939";
-    gameOver = true;
+    inputMessage.textContent = `정답: ${computerNum}`;
+    playBt.disabled = true;
+    userInput.disabled = true;
+    playBt.style = "display:none";
+    resetBt.style = "border-radius:8px";
   }
   if (chanceAreaNum <= 0) {
     gameOver = true;
