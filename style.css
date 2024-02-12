@@ -47,6 +47,8 @@ main {
 .result-area-text {
   font-size: 62px;
   text-align: center;
+  height: 70px;
+  font-weight: 900;
 }
 #user-input {
   width: 100%;
@@ -59,10 +61,20 @@ main {
   margin-bottom: 26px;
   font-size: 12px;
 }
+.input-conainer {
+  position: relative;
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.input-messege {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  color: red;
 }
 .buttons {
   display: flex;
@@ -94,4 +106,16 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #0066cc;
   color: #fff;
   border-radius: 0 8px 8px 0;
+}
+.chance-area {
+  position: absolute;
+  inset: 0;
+  top: auto;
+  bottom: -26px;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  font-size: 16px;
+  color: #000;
+  pointer-events: none;
 }
