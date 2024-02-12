@@ -8,24 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <h1 class="title">숫자 맞추기 게임</h1>
-      </header>
-      <main>
-        <!-- 결과  -->
-        <!-- 기회 표시 -->
-        <!-- input텍스트 -->
-        <input class="user-area" type="number" />
-        <section class="input-container">
-          <!-- 전송 버튼 -->
-          <button class="play-bt"><span class="text">Submit</span></button>
-          <!-- 리셋 버튼 -->
-          <button class="reset-bt">Reset</button>
-        </section>
-      </main>
-    </div>
-
+    <header><h1 class="headline">숫자 맞추기 게임</h1></header>
+    <main>
+      <section class="game-description-container">
+        <h3 class="game-description-title">게임 규칙</h3>
+        <p class="game-description">
+          1 ~ 100 사이의 숫자가 주어지며, <br />
+          힌트를 통해 총 5번의 기회 안에 정답을 맞추시오.
+        </p>
+      </section>
+      <div class="result-area">
+        <span class="result-area-text">결과</span>
+      </div>
+      <input
+        id="user-input"
+        type="number"
+        placeholder="1부터 100사이의 숫자를 입력해주세요"
+      />
+      <section class="buttons">
+        <button class="input-bt reset-bt">재시작</button>
+        <button class="input-bt play-bt">확인</button>
+      </section>
+    </main>
     <!-- <h1>숫자 맞추기 게임</h1>
     <div id="result-area">결과</div>
     <div id="chance-area">남은기회: 5번"</div>
